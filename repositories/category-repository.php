@@ -6,3 +6,15 @@ $categories = [
   ["id" => 3, "name" => "Sejarah",   "description" => "Buku sejarah dan biografi",       "total_books" => 1],
   ["id" => 4, "name" => "Teknologi", "description" => "Buku pemrograman dan teknologi",  "total_books" => 0],
 ];
+
+function getCategories()
+{
+  global $categories;
+  return $categories;
+}
+
+function getCategory()
+{
+  global $category;
+  return $category;
+}
