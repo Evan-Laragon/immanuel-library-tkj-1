@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="../../styles/books/show.css">
 </head>
 <body>
-  <?php
-  require '../../repositories/book-repository.php';
-  ?>
+ <?php
+require '../../repositories/book-repository.php';
+
+$book = getBook();
+?>
   <div class="app-shell">
   <aside class="app-sidebar">
     <div class="brand">

@@ -53,3 +53,8 @@ $book = [
   "description" => "Kumpulan puisi dan cerita pendek dari berbagai penulis Nusantara.",
   "authors" => ["Pramoedya Ananta Toer", "Sapardi Djoko Damono"],
 ];
+function getBook()
+{
+  global $book;
+  return $book;
+}
