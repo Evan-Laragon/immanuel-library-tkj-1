@@ -7,21 +7,18 @@
   <link rel="stylesheet" href="../../styles/profile/edit.css">
 </head>
 <body>
-  <?php
-  $user = [
-      "id"    => 1,
-      "name"  => "Budi Santoso",
-      "email" => "budi.santoso@siswa.ski.sch.id",
-      "role"  => "member",
-  ];
+   <?php
+  require_once '../../repositories/user-repository.php';
 
-  $profile = [
-      "user_id" => 1,
-      "phone"   => "0812-3456-7890",
-      "address" => "Jl. Merdeka No. 21, Pontianak, Kalimantan Barat",
-      "bio"     => "Murid kelas XI TKJ yang gemar membaca novel fiksi dan buku pengembangan diri.",
-  ];
+  $user = getUser();
+  $profile = getProfile();
   ?>
+  <?php
+require_once '../../repositories/user-repository.php';
+
+$user = getUser();
+$profile = getProfile();
+?>
   <div class="app-shell">
   <aside class="app-sidebar">
     <div class="brand">
@@ -55,7 +52,7 @@
     </header>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="POST" action="../../actions/profile/update.php">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Akun</div>
             <div class="form-row">
