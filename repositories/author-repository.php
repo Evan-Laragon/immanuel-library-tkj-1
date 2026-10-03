@@ -7,3 +7,15 @@ $authors = [
   ["id" => 4, "name" => "Pramoedya Ananta Toer",   "total_books" => 2],
   ["id" => 5, "name" => "Sapardi Djoko Damono",    "total_books" => 1],
 ];
+
+function getAuthors()
+{
+  global $authors;
+  return $authors;
+}
+
+function getAuthor()
+{
+  global $author;
+  return $author;
+}
