@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="../../styles/categories/index.css">
 </head>
 <body>
-  <?php
-  $category = ["id" => 1, "name" => "Fiksi", "description" => "Novel dan cerita rekaan", "total_books" => 3];
-  ?>
+ <?php
+require_once '../../repositories/category-repository.php';
+
+$categories = getCategories();
+?>
   <div class="app-shell">
   <aside class="app-sidebar">
     <div class="brand">
@@ -66,6 +68,7 @@
             </thead>
             <tbody>
               <tr>
+                 <?php foreach ($categories as $category): ?>
                 <td>
                   <div class="cell-primary">
                     <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>
@@ -81,6 +84,7 @@
                   </div>
                 </td>
               </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
