@@ -17,12 +17,7 @@ $activeMenu = 'profile';
 $pageTitle = 'Profil Saya';
 $pageSubtitle = 'Kelola data akun dan profil Anda';
 ?>
-<?php
-require_once '../../repositories/user-repository.php';
 
-$user = getUser();
-$profile = getProfile();
-?>
   <div class="app-shell">
  <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
 
