@@ -9,32 +9,28 @@
 </head>
 
 <body>
-  <?php
-  $book = [
-    "id" => 1,
-    "title" => "Laskar Pelangi",
-    "category" => "Fiksi",
-    "year" => 2005,
-    "stock" => 12,
-    "authors" => "Andrea Hirata",
-  ];
-  ?>
-  <div class="app-shell">
-  <?php $pageTitle = "Manajemen Buku"; $pageSubtitle = "Kelola data buku, kategori, dan penulis"; ?> <?php require_once '../../components/admin/sidebar.php'; ?> <main class="app-main"> <?php require_once '../../components/admin/topbar.php'; ?>
+ <?php
+$book = [
+  "id" => 1,
+  "title" => "Laskar Pelangi",
+  "category" => "Fiksi",
+  "year" => 2005,
+  "stock" => 12,
+  "authors" => "Andrea Hirata",
+];
 
-    <main class="app-main">
-<?php
-$pageTitle = "Manajemen Buku";
-$pageSubtitle = "Kelola data buku, kategori, dan penulis";
+$activeMenu = 'books';
+$pageTitle = 'Manajemen Buku';
+$pageSubtitle = 'Kelola data buku, kategori, dan penulis';
 ?>
 
-<?php require_once '../../components/admin/sidebar.php'; ?>
+<div class="app-shell">
+  <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
 
-<main class="app-main">
+  <main class="app-main">
+    <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
 
-  <?php require_once '../../components/admin/topbar.php'; ?>
-
-      <div class="app-content">
+    <div class="app-content">
         <div class="toolbar">
           <form method="" action="" class="toolbar-filters">
             <div class="search-box">
