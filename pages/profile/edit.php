@@ -26,6 +26,7 @@ $pageSubtitle = 'Kelola data akun dan profil Anda';
 
       <div class="app-content">
         <form method="POST" action="../../actions/profile/update.php">
+        <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Akun</div>
             <div class="form-row">
