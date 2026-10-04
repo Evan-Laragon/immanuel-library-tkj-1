@@ -14,13 +14,13 @@
       </svg> Beranda
     </a>
 
-    <a href="/pages/books/index.php" class="active">
-      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
-      </svg> Buku
-    </a>
+  <a href="/pages/books/index.php" class="<?= strpos($_SERVER['PHP_SELF'], '/pages/books/') !== false ? 'active' : '' ?>">
+  <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+  </svg> Buku
+</a>
 
     <a href="/pages/categories/index.php" class="">
       <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
