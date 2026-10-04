@@ -1,9 +1,11 @@
 <?php
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$role = $_POST['role'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
 
-print_r($_POST);
+    print_r($_POST);
+}
 ?>
