@@ -8,7 +8,9 @@
 </head>
 <body>
   <?php
-$author = ["id" => 1, "name" => "Andrea Hirata", "total_books" => 1];
+require __DIR__ . '/../../repositories/author-repository.php';
+
+$authors = getAuthors();
 
 $activeMenu = 'authors';
 $pageTitle = 'Manajemen Penulis';
@@ -42,6 +44,7 @@ $pageSubtitle = 'Kelola data penulis yang terdaftar di sistem';
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($authors as $author): ?>
               <tr>
                 <td>
                   <div class="cell-primary">
@@ -53,10 +56,11 @@ $pageSubtitle = 'Kelola data penulis yang terdaftar di sistem';
                 <td>
                   <div class="cell-actions">
                     <a href="edit.php?id=<?= $author['id'] ?>" class="btn btn-outline btn-sm">Edit</a>
-                    <a href="#" class="btn btn-danger btn-sm">Hapus</a>
+                    <a href="../../actions/authors/destroy.php?id=<?= $author['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus penulis ini?')">Hapus</a>
                   </div>
                 </td>
               </tr>
+               <?php endforeach; ?>
             </tbody>
           </table>
         </div>
