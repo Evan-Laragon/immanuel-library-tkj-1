@@ -46,8 +46,8 @@ $pageSubtitle = 'Kelola kategori untuk mengelompokkan buku';
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($categories as $category): ?>
               <tr>
-                 <?php foreach ($categories as $category): ?>
                 <td>
                   <div class="cell-primary">
                     <span class="cell-thumb"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></span>
