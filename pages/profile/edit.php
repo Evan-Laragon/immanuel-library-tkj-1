@@ -1,3 +1,13 @@
+<?php
+require_once __DIR__ . "/../../repositories/user-repository.php";
+
+$user = getUser();
+$profile = getProfile();
+
+$pageTitle = "Profil Saya";
+$pageSubtitle = "Kelola data akun dan profil Anda";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,26 +17,14 @@
   <link rel="stylesheet" href="../../styles/profile/edit.css">
 </head>
 <body>
-<?php
-require_once '../../repositories/user-repository.php';
-
-$user = getUser();
-$profile = getProfile();
-
-$activeMenu = 'profile';
-$pageTitle = 'Profil Saya';
-$pageSubtitle = 'Kelola data akun dan profil Anda';
-?>
-
   <div class="app-shell">
- <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
- <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/profile/update.php">
-        <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
           <div class="form-card" style="margin-bottom:20px;">
             <div class="form-section-title">Data Akun</div>
             <div class="form-row">
@@ -61,7 +59,7 @@ $pageSubtitle = 'Kelola data akun dan profil Anda';
               <textarea id="bio" name="bio" rows="3"><?= $profile['bio'] ?></textarea>
             </div>
             <div class="form-actions">
-              <button type="button" class="btn btn-outline" onclick="history.back()">Batal</button>
+              <button type="button" class="btn btn-outline">Batal</button>
               <button type="submit" name="update" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>

@@ -3,7 +3,6 @@
     <h1><?= $pageTitle ?></h1>
     <p><?= $pageSubtitle ?></p>
   </div>
-
   <div class="topbar-user">
     <span class="avatar">BS</span>
     <div>

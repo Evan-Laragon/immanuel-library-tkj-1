@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . "/../../repositories/category-repository.php";
+
+$category = getCategory();
+
+$pageTitle = "Edit Kategori";
+$pageSubtitle = "Perbarui data kategori";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,20 +16,11 @@
   <link rel="stylesheet" href="../../styles/categories/edit.css">
 </head>
 <body>
-  <?php
-  require __DIR__ . '/../../repositories/category-repository.php';
-
-  $category = getCategory();
-
-  $activeMenu = 'categories';
-  $pageTitle = 'Edit Kategori';
-  $pageSubtitle = 'Perbarui data kategori';
-  ?>
   <div class="app-shell">
-  <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-      <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/categories/update.php">

@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . "/../../repositories/author-repository.php";
+
+$author = getAuthor();
+
+$pageTitle = "Edit Penulis";
+$pageSubtitle = "Perbarui data penulis";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -9,22 +18,12 @@
 </head>
 
 <body>
-  <?php
- require __DIR__ . '/../../repositories/author-repository.php';
-
-$author = getAuthor();
-
-  $activeMenu = 'authors';
-  $pageTitle = 'Edit Penulis';
-  $pageSubtitle = 'Perbarui data penulis';
-  ?>
-  
   <div class="app-shell">
-    <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
+    <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-    <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
-    
+      <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
+
       <div class="app-content">
         <form method="POST" action="../../actions/authors/update.php">
           <input type="hidden" name="id" value="<?= $author['id'] ?>">

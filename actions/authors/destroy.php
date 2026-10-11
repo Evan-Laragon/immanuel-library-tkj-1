@@ -1,8 +1,8 @@
 <?php
-
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
+if (isset($_GET['id']) && $_SERVER['REQUEST_METHOD'] === "GET") {
     $id = $_GET['id'];
 
-    print_r($_GET);
+    echo "Penulis dengan id " . htmlspecialchars($id) . " berhasil dihapus.";
 }
+
 ?>

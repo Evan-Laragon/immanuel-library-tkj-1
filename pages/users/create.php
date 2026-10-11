@@ -1,3 +1,8 @@
+<?php
+$pageTitle = "Tambah Pengguna";
+$pageSubtitle = "Buat akun pengguna baru beserta perannya";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,16 +12,11 @@
   <link rel="stylesheet" href="../../styles/users/create.css">
 </head>
 <body>
-  <?php
-$activeMenu = 'users';
-$pageTitle = 'Tambah Pengguna';
-$pageSubtitle = 'Buat akun pengguna baru beserta perannya';
-?>
   <div class="app-shell">
-  <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-   <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
 
       <div class="app-content">
         <form method="POST" action="../../actions/users/store.php">

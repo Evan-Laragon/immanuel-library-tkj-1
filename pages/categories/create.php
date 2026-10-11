@@ -1,3 +1,8 @@
+<?php
+$pageTitle = "Tambah Kategori";
+$pageSubtitle = "Buat kategori baru untuk mengelompokkan buku";
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,17 +11,13 @@
   <title>Tambah Kategori - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/categories/create.css">
 </head>
-<?php
-$activeMenu = 'categories';
-$pageTitle = 'Tambah Kategori';
-$pageSubtitle = 'Buat kategori baru untuk mengelompokkan buku';
-?>
 <body>
   <div class="app-shell">
- <?php require __DIR__ . '/../../components/admin/sidebar.php'; ?>
+  <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-   <?php require __DIR__ . '/../../components/admin/topbar.php'; ?>
+    <?php require_once __DIR__ . "/../../components/admin/topbar.php" ?>
+
       <div class="app-content">
         <form method="POST" action="../../actions/categories/store.php">
           <div class="form-card">
