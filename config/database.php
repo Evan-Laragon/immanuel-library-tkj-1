@@ -1,10 +1,11 @@
 <?php
+
 $host = "localhost";
 $dbname = "immanuel_library";
 $username = "root";
 $password = "";
 
-$dsn = "mysql:host=$host;dbname=;charset=utf8mb4";
+$dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
